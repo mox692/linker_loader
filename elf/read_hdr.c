@@ -13,7 +13,6 @@ int main(int argc, char *argv[]){
 		printf("open err\n");
 		return -1;
 	}
-	printf("open success!\n");
 	
 	// get size of bin
 	struct stat sb;
@@ -21,8 +20,26 @@ int main(int argc, char *argv[]){
 
 	// mmap!
  	char *head = mmap(NULL, sb.st_size, PROT_READ, MAP_SHARED, fd, 0);
-	printf("head addr: %p\n", head);
+
+	// read elf header part
+	Elf_Ehdr *ehdr;
+	ehdr = (Elf_Ehdr*)(head);
+
+	// get head pointer of section header's section string section. 
+	Elf_Shdr *shstr = (Elf_Shdr *)(head + ehdr->e_shoff + (ehdr->e_shstrndx * ehdr->e_shentsize)); // 
+
+	// get each section
+	printf("========:\n");
+	printf("sections:\n");
+	printf("========:\n");
+	for(int i = 0; i < ehdr->e_shnum; i++) {
+		// get each section's head
+		Elf_Shdr *sec_hdr = (Elf_Shdr*)(head + ehdr->e_shoff + i * ehdr->e_shentsize);
+		printf("%s\n",(char*)(head + shstr->sh_offset + sec_hdr->sh_name));
+		// !! Wrong pattern
+		// printf("%s\n", (char*)(shstr + sec_hdr->sh_name));
+	}
+	printf("-------\n");
 
 	return 0;
-
 }
