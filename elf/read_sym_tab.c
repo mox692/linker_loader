@@ -23,7 +23,6 @@ int getSectionOff(char *section_name, char *head) {
 	printf("section header start addr: %lu\n", e_header->e_shoff);
 
 	int section_str_index = e_header->e_shstrndx;
-	int sec_header_name_str_offsets[e_header->e_shnum];
 	int sec_header_table_head = e_header->e_shoff;
 	int sec_name_section_index = e_header->e_shstrndx;
 	int shstrtab_section_offset;
@@ -40,10 +39,6 @@ int getSectionOff(char *section_name, char *head) {
 		printf("index: %d, current_head: %p\n" ,i, current_head);
 
 		Elf_Shdr *e_shdr = (Elf_Shdr*)(current_head);
-
-		sec_header_name_str_offsets[i] = e_shdr->sh_name;
-
-		// fix
 		m[i].key = e_shdr->sh_name;
 		m[i].value = e_shdr->sh_offset;
 
@@ -55,30 +50,27 @@ int getSectionOff(char *section_name, char *head) {
 
 	// debug
 	printf("\n");
-
 	for (int i = 0; i < e_header->e_shnum; i++) {
 		printf("m[%d].key = %d, m[%d].value = %d\n", i, m[i].key, i, m[i].value);
 	}
-
-	// search .shstrtab section
 	printf("strIndex: %d\n", sec_name_section_index);
 	printf("shstrtab_section_offset: %d\n",shstrtab_section_offset);
 
 	char *shstrtab_section_head = (char*)(head + shstrtab_section_offset);
-
 	printf("shstrtab_srction_head: %p\n", shstrtab_section_head);
-
 	for (int i = 0; i < e_header->e_shnum; i++) {
+		// TODO: over 100 char sec name.
 		char bin_section_name[100];
 		strcpy(bin_section_name, shstrtab_section_head + m[i].key);
 			
 		printf("section name: %s\n", bin_section_name);
+		// MEMO: if we permit i == 0 condition, 
+		// strstr sometimes success unexpectedly (caused by white space?)
 		if(strstr(bin_section_name, section_name) != NULL && i != 0) {
 			printf("match to %s!!, m[%d].value = %d\n", bin_section_name, i, m[i].value);
 			return m[i].value;
 		}
 	}
-	
 	return -1;
 }
 
