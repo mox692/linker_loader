@@ -1,0 +1,6 @@
+% ./fill
+&cvalue = 0x08048618, cvalue = 0xaaaaaa01
+&svalue = 0x0804861c, svalue = 0x55551234
+&lvalue = 0x08048620, lvalue = 0x99999999
+&lvalue2 = 0x08048624, lvalue2 = 0x99999999
+% 

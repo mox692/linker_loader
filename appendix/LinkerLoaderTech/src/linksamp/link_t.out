@@ -1,0 +1,2 @@
+% gcc main.o lib1.o lib2.o -Wall -T ldscript -o otherscr
+% 

@@ -1,0 +1,32 @@
+
+hello:     file format elf32-i386
+
+Program Header:
+    PHDR off    0x00000034 vaddr 0x08048034 paddr 0x08048034 align 2**2
+         filesz 0x000000c0 memsz 0x000000c0 flags r-x
+  INTERP off    0x000000f4 vaddr 0x080480f4 paddr 0x080480f4 align 2**0
+         filesz 0x00000019 memsz 0x00000019 flags r--
+    LOAD off    0x00000000 vaddr 0x08048000 paddr 0x08048000 align 2**12
+         filesz 0x0000050d memsz 0x0000050d flags r-x
+    LOAD off    0x00000510 vaddr 0x08049510 paddr 0x08049510 align 2**12
+         filesz 0x000000d0 memsz 0x000000ec flags rw-
+ DYNAMIC off    0x00000520 vaddr 0x08049520 paddr 0x08049520 align 2**2
+         filesz 0x00000098 memsz 0x00000098 flags rw-
+    NOTE off    0x00000110 vaddr 0x08048110 paddr 0x08048110 align 2**2
+         filesz 0x00000018 memsz 0x00000018 flags r--
+
+Dynamic Section:
+  NEEDED      libc.so.4
+  INIT        0x8048334
+  FINI        0x80484f8
+  HASH        0x8048128
+  STRTAB      0x804827c
+  SYMTAB      0x804817c
+  STRSZ       0x9d
+  SYMENT      0x10
+  DEBUG       0x0
+  PLTGOT      0x80495c8
+  PLTRELSZ    0x18
+  PLTREL      0x11
+  JMPREL      0x804831c
+

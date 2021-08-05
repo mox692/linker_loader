@@ -1,0 +1,4 @@
+% gcc -fpic -c sample.c -o sample_pic.o -Wall
+% gcc -shared -Wl,-soname=libsample.so.1 sample_pic.o -o libsample.so.1
+% ln -s libsample.so.1 libsample.so
+% 

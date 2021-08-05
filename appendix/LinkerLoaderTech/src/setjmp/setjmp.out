@@ -1,0 +1,10 @@
+% gcc setjmp.c -o setjmp -Wall
+% 
+% ./setjmp
+return from _setjmp()
+return with zero.
+func()
+return from _setjmp()
+ret = 1
+exit.
+% 

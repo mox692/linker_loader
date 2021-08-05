@@ -1,0 +1,2 @@
+% /usr/libexec/aout/ar ruc bsdar.a file*.txt
+% /usr/bin/ar ruc gnuar.a file*.txt

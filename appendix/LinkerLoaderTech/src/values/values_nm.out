@@ -1,0 +1,48 @@
+% nm values
+080497a0 A _DYNAMIC
+08049848 A _GLOBAL_OFFSET_TABLE_
+0804983c ? __CTOR_END__
+
+        ...(ÃæÎ¬)...
+
+08049770 D __progname
+         w __register_frame_info
+08049860 A _edata
+0804988c A _end
+080485d8 T _fini
+08048334 T _init
+08048380 T _start
+         U atexit
+0804977c D c
+08049884 B ci0
+08048760 R ci1
+08048764 R ci2
+08049778 d completed.4
+0804988c A end
+0804987c B environ
+         U exit
+0804846c t fini_dummy
+0804979c d force_to_data
+0804977c d force_to_data
+08048474 t frame_dummy
+08048590 T func
+08048590 t gcc2_compiled.
+08048418 t gcc2_compiled.
+080484a0 t gcc2_compiled.
+080485a8 t gcc2_compiled.
+08049888 B i0
+08049780 D i1
+08049784 D i2
+08048498 t init_dummy
+080485d0 t init_dummy
+080484a0 T main
+08049860 b object.11
+08049774 d p.3
+08049880 B p0
+08049790 D p1
+         U printf
+08049878 b si0
+08049788 d si1
+0804978c d si2
+08049794 D str
+% 

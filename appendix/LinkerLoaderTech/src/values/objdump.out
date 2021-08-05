@@ -1,0 +1,25 @@
+% objdump -h values
+
+values:     file format elf32-i386
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+
+        ...(ÃæÎ¬)...
+
+  8 .text         00000258  08048380  08048380  00000380  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  9 .fini         00000006  080485d8  080485d8  000005d8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 10 .rodata       00000190  080485e0  080485e0  000005e0  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 11 .data         0000002c  08049770  08049770  00000770  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+
+        ...(ÃæÎ¬)...
+
+ 17 .bss          0000002c  08049860  08049860  00000860  2**2
+                  ALLOC
+
+        ...(¸åÎ¬)...
+

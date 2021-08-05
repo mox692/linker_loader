@@ -1,0 +1,2 @@
+% gcc values.c values_sub.o -o values
+% 

@@ -1,0 +1,8 @@
+% ./sample abc def ghi
+argc=4
+argv[0]=./sample
+argv[1]=abc
+argv[2]=def
+argv[3]=ghi
+sum 91125
+% 

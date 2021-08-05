@@ -1,0 +1,9 @@
+% readelf -x 8 elfsamp.o
+
+Hex dump of section '.shstrtab':
+  0x00000000 62617472 74732e00 6261746d 79732e00 ..symtab..strtab
+  0x00000010 2e6c6572 2e006261 74727473 68732e00 ..shstrtab..rel.
+  0x00000020 00737362 2e006174 61642e00 74786574 text..data..bss.
+  0x00000030 632e0061 7461646f 722e0065 746f6e2e .note..rodata..c
+  0x00000040                     00746e 656d6d6f omment.
+% 

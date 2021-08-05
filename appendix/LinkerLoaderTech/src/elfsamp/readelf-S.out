@@ -1,0 +1,35 @@
+% readelf -S elfsamp
+There are 25 section headers, starting at offset 0x8b0:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .interp           PROGBITS        080480f4 0000f4 000019 00   A  0   0  1
+  [ 2] .note.ABI-tag     NOTE            08048110 000110 000018 00   A  0   0  4
+  [ 3] .hash             HASH            08048128 000128 000090 04   A  4   0  4
+  [ 4] .dynsym           DYNSYM          080481b8 0001b8 000110 10   A  5   1  4
+  [ 5] .dynstr           STRTAB          080482c8 0002c8 0000a8 00   A  0   0  1
+  [ 6] .rel.bss          REL             08048370 000370 000008 08   A  4  13  4
+  [ 7] .rel.plt          REL             08048378 000378 000018 08   A  4   9  4
+  [ 8] .init             PROGBITS        08048390 000390 00000b 00  AX  0   0  4
+  [ 9] .plt              PROGBITS        0804839c 00039c 000040 04  AX  0   0  4
+  [10] .text             PROGBITS        080483dc 0003dc 0001f0 00  AX  0   0  4
+  [11] .fini             PROGBITS        080485cc 0005cc 000006 00  AX  0   0  4
+  [12] .rodata           PROGBITS        080485d4 0005d4 000010 00   A  0   0  4
+  [13] .data             PROGBITS        080495e4 0005e4 000014 00  WA  0   0  4
+  [14] .eh_frame         PROGBITS        080495f8 0005f8 000004 00  WA  0   0  4
+  [15] .dynamic          DYNAMIC         080495fc 0005fc 0000b0 08  WA  5   0  4
+  [16] .ctors            PROGBITS        080496ac 0006ac 000008 00  WA  0   0  4
+  [17] .dtors            PROGBITS        080496b4 0006b4 000008 00  WA  0   0  4
+  [18] .got              PROGBITS        080496bc 0006bc 000018 04  WA  0   0  4
+  [19] .bss              NOBITS          080496d4 0006d4 00002c 00  WA  0   0  4
+  [20] .comment          PROGBITS        00000000 0006d4 0000c8 00      0   0  1
+  [21] .note             NOTE            00000000 00079c 000064 00      0   0  1
+  [22] .shstrtab         STRTAB          00000000 000800 0000ae 00      0   0  1
+  [23] .symtab           SYMTAB          00000000 000c98 0004d0 10     24  35  4
+  [24] .strtab           STRTAB          00000000 001168 0001cf 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings)
+  I (info), L (link order), G (group), x (unknown)
+  O (extra OS processing required) o (OS specific), p (processor specific)
+% 

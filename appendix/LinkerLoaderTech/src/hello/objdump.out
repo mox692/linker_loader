@@ -1,0 +1,45 @@
+
+hello:     file format elf32-i386
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .interp       00000019  080480f4  080480f4  000000f4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .note.ABI-tag 00000018  08048110  08048110  00000110  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .hash         00000054  08048128  08048128  00000128  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .dynsym       00000100  0804817c  0804817c  0000017c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .dynstr       0000009d  0804827c  0804827c  0000027c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .rel.plt      00000018  0804831c  0804831c  0000031c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .init         0000000b  08048334  08048334  00000334  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  7 .plt          00000040  08048340  08048340  00000340  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  8 .text         00000178  08048380  08048380  00000380  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  9 .fini         00000006  080484f8  080484f8  000004f8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 10 .rodata       0000000f  080484fe  080484fe  000004fe  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 11 .data         0000000c  08049510  08049510  00000510  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 12 .eh_frame     00000004  0804951c  0804951c  0000051c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 13 .dynamic      00000098  08049520  08049520  00000520  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 14 .ctors        00000008  080495b8  080495b8  000005b8  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 15 .dtors        00000008  080495c0  080495c0  000005c0  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 16 .got          00000018  080495c8  080495c8  000005c8  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 17 .bss          0000001c  080495e0  080495e0  000005e0  2**2
+                  ALLOC
+ 18 .comment      000000a0  00000000  00000000  000005e0  2**0
+                  CONTENTS, READONLY
+ 19 .note         00000050  00000000  00000000  00000680  2**0
+                  CONTENTS, READONLY

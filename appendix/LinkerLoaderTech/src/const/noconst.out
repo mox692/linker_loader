@@ -1,0 +1,2 @@
+% gcc const.c const_sub.c -o noconst -T elf_i386.x.noconst
+% 

@@ -1,0 +1,5 @@
+% ./down
+Segmentation fault (core dumped)
+% ls *.core
+down.core
+% 
