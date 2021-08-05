@@ -1,0 +1,23 @@
+% ./continue calc calc.core
+open file. (calc)
+Program Header 0: Type:LOAD (loaded)
+Program Header 1: Type:LOAD (loaded)
+Program Header 2: Type:NOTE
+  Note:FreeBSD(PRSTATUS)
+open file. (calc.core)
+Program Header 0: Type:NOTE
+  Note:FreeBSD(PRSTATUS)
+  Note:FreeBSD(PRREGSET)
+  Note:FreeBSD(PRPSINFO)
+Program Header 1: Type:LOAD (loaded)
+Program Header 2: Type:LOAD (loaded)
+register setting.
+fs     0000002f  es     0000002f  ds     0000002f  edi    bfbff75c
+esi    bfbff754  ebp    bfbff700  isp    00000000  ebx    00000001
+edx    0018a617  ecx    00000000  eax    0018a617  trapno 00000000
+err    00000000  eip    08048248  cs     0000001f  eflags 00000287
+esp    bfbff6e8  ss     0000002f  gs     0000002f
+set registers and stack, and jump to abort point.
+7890123456789
+8404543941
+% 

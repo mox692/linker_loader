@@ -1,0 +1,9 @@
+% ./addr
+&value  = 0x12345678
+stext   = 0x83e58955, etext   = 0x87c035ff
+sdata   = 0xbfbff852, edata   = 0x00000001
+&stext  = 0x080480f4, &etext  = 0x08048310
+&srdata = 0x08048380, &erdata = 0x08048540
+&sdata  = 0x08048718, &edata  = 0x08048724
+&sbss   = 0x080487e8, &ebss   = 0x08048800
+% 

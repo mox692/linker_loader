@@ -1,0 +1,16 @@
+% ./loader sample abc def ghi
+open file. (sample)
+Program Header 0: Type:LOAD (loaded)
+Program Header 1: Type:LOAD (loaded)
+Program Header 2: Type:OTHER
+found .bss
+clear BSS: 0x08053c80, 0x0000086c
+Entry Point: 0x080480b8
+jump to entry point.
+argc=4
+argv[0]=sample
+argv[1]=abc
+argv[2]=def
+argv[3]=ghi
+sum 91125
+% 

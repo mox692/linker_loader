@@ -1,0 +1,22 @@
+% gcc hello.c -Wall -o hello -v
+Using builtin specs.
+gcc version 2.95.4 20020320 [FreeBSD]
+ /usr/libexec/cpp0 -lang-c -v -D__GNUC__=2 -D__GNUC_MINOR__=95 -Di386 -D__FreeBSD__=4 -D__FreeBSD_cc_version=460001 -Dunix -D__i386__ -D__FreeBSD__=4 -D__FreeBSD_cc_version=460001 -D__unix__ -D__i386 -D__unix -Acpu(i386) -Amachine(i386) -Asystem(unix) -Asystem(FreeBSD) -Wall -Acpu(i386) -Amachine(i386) -Di386 -D__i386 -D__i386__ -D__ELF__ hello.c /tmp/ccqnUJxp.i
+GNU CPP version 2.95.4 20020320 [FreeBSD] (i386 FreeBSD/ELF)
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/include
+ /usr/include
+End of search list.
+The following default directories have been omitted from the search path:
+ /usr/include/g++
+End of omitted list.
+ /usr/libexec/cc1 /tmp/ccqnUJxp.i -quiet -dumpbase hello.c -Wall -version -o /tmp/ccbkxy21.s
+GNU C version 2.95.4 20020320 [FreeBSD] (i386-unknown-freebsd) compiled by GNU C version 2.95.4 20020320 [FreeBSD].
+ /usr/libexec/elf/as -v -o /tmp/ccs4WTKL.o /tmp/ccbkxy21.s
+GNU assembler version 2.12.1 [FreeBSD] 2002-07-20 (i386-obrien-freebsd5.0) using BFD version 2.12.1 [FreeBSD] 2002-07-20
+ /usr/libexec/elf/ld -V -dynamic-linker /usr/libexec/ld-elf.so.1 -o hello /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o -L/usr/lib /tmp/ccs4WTKL.o -lgcc -lc -lgcc /usr/lib/crtend.o /usr/lib/crtn.o
+GNU ld version 2.12.1 [FreeBSD] 2002-07-20
+  Supported emulations:
+   elf_i386
+% 

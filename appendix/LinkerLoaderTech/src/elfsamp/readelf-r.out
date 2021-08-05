@@ -1,0 +1,12 @@
+% readelf -r elfsamp
+
+Relocation section '.rel.bss' at offset 0x370 contains 1 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+080496d4  00000105 R_386_COPY        080496d4   __stdoutp
+
+Relocation section '.rel.plt' at offset 0x378 contains 3 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+080496c8  00000507 R_386_JUMP_SLOT   080483ac   fprintf
+080496cc  00000b07 R_386_JUMP_SLOT   080483bc   atexit
+080496d0  00000f07 R_386_JUMP_SLOT   080483cc   exit
+% 

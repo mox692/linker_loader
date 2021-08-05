@@ -1,0 +1,16 @@
+% readelf -r readsec.o
+
+Relocation section '.rel.text' at offset 0x588 contains 12 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000019  00000a02 R_386_PC32        00000000   open
+00000031  00000b02 R_386_PC32        00000000   fstat
+0000004e  00000c02 R_386_PC32        00000000   mmap
+00000091  00000601 R_386_32          00000000   .rodata
+00000096  00000d01 R_386_32          00000000   __stderrp
+0000009c  00000e02 R_386_PC32        00000000   fprintf
+000000a9  00000f02 R_386_PC32        00000000   exit
+00000121  00000601 R_386_32          00000000   .rodata
+00000126  00001002 R_386_PC32        00000000   printf
+00000140  00001102 R_386_PC32        00000000   munmap
+0000014f  00001202 R_386_PC32        00000000   close
+0000015c  00000f02 R_386_PC32        00000000   exit

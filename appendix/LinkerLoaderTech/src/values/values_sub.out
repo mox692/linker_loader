@@ -1,0 +1,4 @@
+% gcc -c values_sub.c
+% ls values_sub.o
+values_sub.o
+% 

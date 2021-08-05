@@ -1,0 +1,2 @@
+% gcc const.c const_sub.c -o const
+% 

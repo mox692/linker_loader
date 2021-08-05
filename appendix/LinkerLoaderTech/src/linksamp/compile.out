@@ -1,0 +1,4 @@
+% gcc -c main.c -Wall
+% gcc -c lib1.c -Wall
+% gcc -c lib2.c -Wall
+% 
