@@ -6,13 +6,19 @@
 #include<fcntl.h>
 #include<sys/mman.h>
 
+typedef struct {
+	int section_offset;
+	int section_size;
+} ret_getSectionOff;
+
 //
 // read elf's symbol table, and pritnt all symbol name.
 //
 
 // Return input section's offset(int) from file head.
 // If given section doesn't exist, will return -1.
-int getSectionOff(char *section_name, char *head) {
+ret_getSectionOff getSectionOff(char *section_name, char *head) {
+	ret_getSectionOff ret;
 	// reach file's section header table.
 	Elf_Ehdr *e_header;
 	e_header = (Elf_Ehdr*)(head);
@@ -30,6 +36,7 @@ int getSectionOff(char *section_name, char *head) {
 	typedef struct {
 		int key;   // str_offset
 		int value; // sh_offset
+		int size;
 	} offset_map;
 	offset_map m[e_header->e_shnum];
 
@@ -41,6 +48,7 @@ int getSectionOff(char *section_name, char *head) {
 		Elf_Shdr *e_shdr = (Elf_Shdr*)(current_head);
 		m[i].key = e_shdr->sh_name;
 		m[i].value = e_shdr->sh_offset;
+		m[i].size = e_shdr->sh_size;
 
 		if(i == section_str_index) {
 			// get shstrtab section's offset
@@ -68,10 +76,14 @@ int getSectionOff(char *section_name, char *head) {
 		// strstr sometimes success unexpectedly (caused by white space?)
 		if(strstr(bin_section_name, section_name) != NULL && i != 0) {
 			printf("match to %s!!, m[%d].value = %d\n", bin_section_name, i, m[i].value);
-			return m[i].value;
+			ret.section_offset = m[i].value;
+			ret.section_size = m[i].size;
+
+			return ret;
 		}
 	}
-	return -1;
+	ret.section_offset = -1;
+	return ret;
 }
 
 int main(int argc, char *argv[]) {
@@ -99,10 +111,21 @@ int main(int argc, char *argv[]) {
 	}
 
 	// access .symtab section
-	char *secstr = ".symtab";
-	int offset = getSectionOff(secstr, head);
-	if(offset == -1) {
+	char *secstr = ".strtab";
+	// section_data contain section's offset and size.
+	ret_getSectionOff section_data = getSectionOff(secstr, head);
+	if(section_data.section_offset == -1) {
 		printf("cannot find given section, %s", secstr);
 		return -1;
 	}
+
+	// debug
+	printf("section_data.section_offset: %d, section_data.section_size: %d\n",section_data.section_offset, section_data.section_size);
+	
+	// read .symtab section
+	for(int i = 0; i < section_data.section_size + 30; i++) {
+		printf("%s", (char*)(head + section_data.section_offset + i));
+	}
+
+	return 0;
 }
